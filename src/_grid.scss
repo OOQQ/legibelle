@@ -8,7 +8,6 @@ body {
 	> * {
 		display: grid;
 		grid-auto-rows: max-content;
-		border: 1px solid green; //debug
 	}
 
 	> :not(main) {
@@ -23,7 +22,7 @@ body {
 .sticky {
 	position: sticky;
 	top: 0;
-	background-color:$transparentWhite;
+	background-color: $transparentWhite;
 }
 
 // columns
@@ -49,8 +48,27 @@ script {
 
 //////// media query - everything else
 @media screen and(min-width:$contentWidth) {
+	header nav {
+		.branding{
+			justify-content:initial;
+		}
+		
+		.branding:nth-child(1) {
+			display:hidden;
+		}
+	
+		.burger{
+			display:none;
+		}
+	
+		.opts{
+			display:initial;
+		}
+	}
+
 	body > * { //every row inside the body have this number of columns
 		grid-template-columns: [start] 1fr [left] 2fr [content] $contentWidth 2fr [right] 1fr [end];
+
 		> * {
 			grid-column: content; //every element is centered by default
 		}
@@ -89,18 +107,18 @@ script {
 	.column {
 		flex-basis: 0; //equal widths
 		flex-grow: 1;
-		margin: 0rem 1rem;
+		margin: 0rem 1rem; //equal spacing
 	}
 
-	.column:nth-child(1) {
+	.column:nth-child(1) { //first column has no margin
 		margin-left: 0rem;
 	}
 
-	.column:nth-last-child(1) {
+	.column:nth-last-child(1) { //last column has no margin
 		margin-right: 0rem;
 	}
 
-	.hero {
+	.hero { //hero div
 		height: 40rem;
 	}
 }

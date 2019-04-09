@@ -1,0 +1,169 @@
+@import 'variable';
+
+//BURGER ////////////////////////
+#nav-toggle span, 
+#nav-toggle span:before,
+#nav-toggle span:after {
+	
+  cursor: pointer;
+  height: 1px;
+  width: 20px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -8px;
+}
+#nav-toggle span:after {
+  bottom: -8px; 
+}
+
+/* #Mega Menu Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.mega-menu {
+	background: #f0f0f0;
+  	display: none;
+  	left: 0;
+  	position: absolute;
+  	text-align: left;
+  	width: 100%;
+}
+.mega-menu h3 {color: #444;}
+.mega-menu ul {
+	float: left;
+  	margin-bottom: 20px;
+  	margin-right: 40px;
+  	width: 205px;
+}
+.mega-menu ul:last-child {margin-right: 0;}
+.mega-menu a {
+	border-bottom: 1px solid #ddd;
+  	color: #4ea3d8;
+  	display: block;
+  	padding: 10px 0;
+}
+.mega-menu a:hover {color: #2d6a91;}
+
+
+
+/* #Droppable Class Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.droppable {position: static;}
+.droppable > a:after {
+	content: "\f107";
+  	font-family: FontAwesome;
+  	font-size: 12px;
+  	padding-left: 6px;
+  	position: relative;
+  	top: -1px;
+}
+.droppable:hover .mega-menu {display: block;}
+
+
+
+/* #Browser Clearfix
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.cf:before,
+.cf:after {
+	content: " "; /* 1 */
+   display: table; /* 2 */
+}
+.cf:after {clear: both;}
+
+
+
+/*
+IMPLEMENTAR
+
+<section class="container">
+  <h1>Pure CSS Mega Menu Navigation</h1>
+  <h2>Not a single line of jQuery in sight!</h2>
+</section><!-- .container -->
+
+<nav>
+  <ul class="container ul-reset">
+    <li><a href='#'>Home</a></li>
+    <li class='droppable'>
+      <a href='#'>Category One</a>
+      <div class='mega-menu'>
+      	<div class="container cf">
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 3</h3>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+            <li><a href='#'>Category One Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 4</h3>
+            <li><img src="http://placehold.it/205x172"></li>
+          </ul>
+        </div><!-- .container -->
+      </div><!-- .mega-menu -->
+    </li><!-- .droppable -->
+    <li class='droppable'>
+      <a href='#'>Category Two</a>
+      <div class='mega-menu'>
+        <div class="container cf">
+          <ul class="ul-reset">
+            <h3>Heading 1</h3>
+            <li><a href='#'>Category Two Sublink</a></li>
+            <li><a href='#'>Category Two Sublink</a></li>
+            <li><a href='#'>Category Two Sublink</a></li>
+            <li><a href='#'>Category Two Sublink</a></li>
+            <li><a href='#'>Category Two Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 2</h3>
+            <li><a href='#'>Category Two Sublink</a></li>
+            <li><a href='#'>Category Two Sublink</a></li>
+            <li><a href='#'>Category Two Sublink</a></li>
+            <li><a href='#'>Category Two Sublink</a></li>
+            <li><a href='#'>Category Two Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 3</h3>
+            <li><a href='#'>Category Two Sublink</a></li>
+            <li><a href='#'>Category Two Sublink</a></li>
+            <li><a href='#'>Category Two Sublink</a></li>
+            <li><a href='#'>Category Two Sublink</a></li>
+            <li><a href='#'>Category Two Sublink</a></li>
+          </ul><!-- .ul-reset -->
+          <ul class="ul-reset">
+            <h3>Heading 4</h3>
+            <li><a href='#'>Category Two Sublink</a></li>
+            <li><a href='#'>Category Two Sublink</a></li>
+            <li><a href='#'>Category Two Sublink</a></li>
+            <li><a href='#'>Category Two Sublink</a></li>
+            <li><a href='#'>Category Two Sublink</a></li>
+          </ul><!-- .ul-reset -->
+        </div><!-- .container -->
+      </div><!-- .mega-menu-->
+    </li><!-- .droppable -->
+    <li><a href='#'>Category Three</a></li>
+    <li><a href='#'>Category Four</a></li>
+    <li><a href='#'>Category Five</a></li>
+    <li><a href='#'>Category Six</a></li>
+  </ul><!-- .container .ul-reset -->
+</nav>
+
+*/
