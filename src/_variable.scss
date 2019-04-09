@@ -1,0 +1,37 @@
+//////// fonts
+$verdana:'Verdana', sans-serif;
+$trebuchet:'Trebuchet', 'Trebuchet MS', sans-serif;
+$tahoma:'Tahoma', sans-serif;
+$arial:'Arial', sans-serif;
+$palatino:'Palatino', 'Palatino Linotype', 'Palatino LT STD', serif;
+$monospaced:'Consolas', 'Lucida Sans Typewriter', 'Lucida Console', monospace;
+
+
+//////// colors
+$black:#1f2024;
+$white:whitesmoke;
+$lightGrey:whitesmoke;
+$darkGrey:silver;
+$darkerGrey:gray;
+$transparentWhite:rgba(255, 255, 255, 0.80);
+$transparentBlack:rgba(0, 0, 0, 0.09);
+$transparent:rgba(0, 0, 0, 0);
+
+
+//////// global units
+html {font-size:10px} //baseline unit: 0.1rem = 1px
+$mainAreaWidth:76.8rem;
+$transitionSpeed:all 0.3s ease;//
+
+body { //defaults
+	font-family:$verdana;
+	font-size:1.6rem;
+	line-height:2rem;
+}
+
+.sticky {
+	display:flex;
+	position:sticky;
+	top:0;
+	background-color:$transparentWhite;
+}

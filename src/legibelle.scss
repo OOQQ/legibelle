@@ -1,0 +1,20 @@
+/* legibelle v0.6
+ *
+ * ©2017-©2019 OOOQQ
+ * https://ooqq.me/blob/legibelle
+ * free to use under the MIT license
+ * https://en.wikipedia.org/wiki/MIT_License
+ */
+
+* {box-sizing:border-box}
+
+html, body {
+	width:100vw;
+	height:100vh;
+}
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+@import 'variable';
+@import 'grid';
+@import 'color';
