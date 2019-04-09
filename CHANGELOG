@@ -1,4 +1,18 @@
 Changelog:
+0.6a - 09/04/2019 //still laying the foundation
+	new
+		++ final copypaste from codepen, lots of stuff still buggy as hell
+		++ rought implementation of responsive tables
+		++ rought implementation of forms
+		++ first implementation of responsive content placement on any column and extension on desktop
+		++ first rought implementation of megamenu, far from usable
+		++ added lots of src files: _aside.scss, _footer.scss, _header.scss, _sidebar.scss, etc
+	fix
+		== proper behaivour of mobile frame-to-content whitespace margins
+		== sticky sections now behave properly at any content height
+		== empty pages now properly display the sticky footer
+		== naming of css-grid rows and sections
+
 0.5a - 01/04/2019 //first commit using the git tag system, exciting!
 	new
 		++ added code of conduct
