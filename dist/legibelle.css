@@ -11,8 +11,9 @@
 }
 
 html, body {
+  margin: 0;
   width: 100%;
-  height: 100vh;
+  min-height: 100%;
 }
 
 main p {
@@ -22,8 +23,6 @@ main p {
 h1, h2 {
   font-weight: 400;
   color: grey;
-  font-size: 3rem;
-  margin-top: 1rem;
   letter-spacing: 0em;
   text-transform: capitalize;
 }
@@ -106,10 +105,8 @@ code {
 body {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: [header navBar] auto ()[auto-fit] [main] 1fr [aside footer] auto ()[auto-fit];
-      grid-template-rows: [header navBar] auto repeat(auto-fit) [main] 1fr [aside footer] auto repeat(auto-fit);
-  min-height: 100vh;
-  color: green;
+  -ms-grid-rows: [header] auto [nav] auto [main] 1fr [asideBottom] auto [footer] auto;
+      grid-template-rows: [header] auto [nav] auto [main] 1fr [asideBottom] auto [footer] auto;
 }
 
 body > * {
@@ -120,9 +117,12 @@ body > * {
   border: 1px solid green;
 }
 
-.fullWidth {
-  border: 1px solid red;
-  grid-column: 1 / -1;
+body > :not(main) {
+  padding: 0 2rem;
+}
+
+body main > :not(.fullWidth) {
+  padding: 0 2rem;
 }
 
 .sticky {
@@ -130,10 +130,6 @@ body > * {
   position: sticky;
   top: 0;
   background-color: rgba(255, 255, 255, 0.8);
-}
-
-.column {
-  border: 1px solid green;
 }
 
 .columns {
@@ -147,7 +143,6 @@ body > * {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 1px solid red;
 }
 
 .hero {
@@ -163,11 +158,92 @@ script {
 
 @media screen and (min-width: 64rem) {
   body > * {
-    -ms-grid-columns: [outerLeft] 1fr [innerLeft] 2fr [content] 64rem [innerRight] 2fr [outerRight] 1fr;
-        grid-template-columns: [outerLeft] 1fr [innerLeft] 2fr [content] 64rem [innerRight] 2fr [outerRight] 1fr;
+    -ms-grid-columns: [start] 1fr [left] 2fr [content] 64rem 2fr [right] 1fr [end];
+        grid-template-columns: [start] 1fr [left] 2fr [content] 64rem 2fr [right] 1fr [end];
   }
   body > * > * {
     grid-column: content;
+  }
+  body > * .range1_3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+  }
+  body > * .range1_4 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / 4;
+  }
+  body > * .range1_5 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+  }
+  body > * .range1_6 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-column: 1 / 6;
+  }
+  body > * .range2_6 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 4;
+    grid-column: 2 / 6;
+  }
+  body > * .range3_6 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 3;
+    grid-column: 3 / 6;
+  }
+  body > * .range4_6 {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 2;
+    grid-column: 4 / 6;
+  }
+  body > * .range2_4 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2 / 4;
+  }
+  body > * .range2_5 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+    grid-column: 2 / 5;
+  }
+  body > * .range3_5 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3 / 5;
+  }
+  body > * .range1_2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+  body > * .range2_3 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+  }
+  body > * .range3_4 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+  }
+  body > * .range4_5 {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4 / 5;
+  }
+  body > * .range5_6 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 1;
+    grid-column: 5 / 6;
+  }
+  body > :not(main) {
+    padding: 0rem;
+  }
+  body > main > :not(.fullWidth) {
+    padding: 0rem;
   }
   .columns {
     -webkit-box-orient: horizontal;
@@ -184,10 +260,10 @@ script {
     margin: 0rem 1rem;
   }
   .column:nth-child(1) {
-    margin-left: 0;
+    margin-left: 0rem;
   }
   .column:nth-last-child(1) {
-    margin-right: 0;
+    margin-right: 0rem;
   }
   .hero {
     height: 40rem;
@@ -323,6 +399,10 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+}
+
+img {
+  max-width: 100%;
 }
 
 html {

@@ -1,4 +1,32 @@
 Changelog:
+0.5a - 01/04/2019 //first commit using the git tag system, exciting!
+	new
+		++ added code of conduct
+		++ purchase of legibelle.com domain
+		++ set up of Voodoo Co. as organization on GitHub to eventually transfer the project over
+		++ unable to fix the project history size with BFG, nuke everything & start a clean repro
+	fix
+		== normalize.css is now managed through 'rel="preload"' tag
+		== ternary expression was inverted, fixed
+		== changelog now correctly tagged as X.Xa
+		== added the contribute.md guidelines
+		== commented out 90% of the source, groundwork
+		== proper config of the .vscode Live Sass and more build tweaks, return of the .map files
+		== some tweaks to the .gitignore file
+		== some tweaks to the license file
+		== remove lots of src/.scss files, too much premature optimization
+		== better syntax for the files at the src folder
+		== cleaner index.html
+		== optimized legibelleDark.js, now it fits in one ternary!
+		== .js file moved to dist/
+		== better readme
+		++ tagged the entire project up to v0.5
+		++ creation of the first dev branch
+		++ added MIT license
+		++ added .gitignore
+		== rewrite of CHANGELOG
+		== completed integration with GitHub
+
 0.4a - 27/03/2019 //finally split the codepen file into multiple .scss & migrated development to offline machine
 	new
 		++ creation of the .scss files & derivated directories
