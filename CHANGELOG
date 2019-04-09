@@ -1,0 +1,32 @@
+Changelog:
+0.4a - 27/03/2019 //finally split the codepen file into multiple .scss & migrated development to offline machine
+	new
+		++ creation of the .scss files & derivated directories
+		++ creation of the .js file to manage light / dark themes based on local time
+		++ codacity analysis integration
+	fix
+		== moved development to local machine VSC with handy Sass Live Server
+
+0.3a - 11/11/2018 //another major commit straight from codepen.io, unable to keep going with the project in it's current form
+	new
+		++ yet another major full revision coming from codepen.io
+	fix
+		== too many to list
+
+0.2a - 06/11/2018 //rewrite of the flex container properties
+	new
+		++ creation of the .sidebar classes
+	fix
+		== 'grid-template-columns:auto' instead of fixed sizes
+
+0.1a - 19/20/2018 //major commit of code from codepen.io
+	new
+		++ too many to list
+	fix
+		== too many to list
+
+0.0a - 15/07/2017 //another restart of the project
+	new
+		++ creation of README.md
+	fix
+		==

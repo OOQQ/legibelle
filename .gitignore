@@ -1,4 +1,4 @@
-# Numerous always-ignore extensions
+# numerous always-ignore extensions
 *.diff
 *.err
 *.log
@@ -7,11 +7,10 @@
 *.swo
 *.swp
 *.vi
-*.vimbackup
 *.zip
 *~
 
-# OS or Editor folders
+# os or Editor folders
 ._*
 .cache
 .DS_Store
@@ -22,9 +21,7 @@
 *.esproj
 *.sublime-project
 *.sublime-workspace
+*.vimbckp
 nbproject
 Thumbs.db
 
-# specific for this project
-src/*.map
-src/*.css

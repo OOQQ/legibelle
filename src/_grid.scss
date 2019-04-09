@@ -1,237 +1,83 @@
-//////// media query
-wrapper {
-	display:grid;
-	grid-template-rows:auto auto 1fr auto auto;//if you dont have 5 rows in your html, for the sticky footer to work you must have to change this
-	min-height:100vh;
-}
+@import 'color';
 
-wrapper > * {
-	display:grid;
-	grid-auto-rows:max-content;
-	border:1px solid green;
-}
+//////// mobile first
+body {
+	display: grid;
+	grid-template-rows: [header navBar] auto repeat(auto-fit) [main] 1fr [aside footer] auto repeat(auto-fit);
+	min-height: 100vh;
 
-/*
+	> * {
+		display: grid; //creo que este es el rollo
+		grid-auto-rows: max-content;
+		border: 1px solid green;
+	}
 
-//////// header
-header {
-	font-size:$small;
-	background-color:black;
-	min-height:8em;
-	align-content:center;
-}
-
-.navUL {
-	display:flex;
-	justify-content:space-between;
-	padding:0;
-	list-style-type:none;
-	//background-color:#ddd;
-}
-
-.navUL li {
-	//background-color:#aaa;
-}
-
-nav {
-}
-
-.branding{
-	display:flex;
-	align-items:center;
-	justify-content:space-around;
-	flex-grow:2;
-}
-
-.logo{
-	width:192px;
-	//background-color:#bbb;
-}
-
-.burger{
-	display:initial;
-}
-
-.opts{
-	//background-color:#ccc;
-	display:none;
-	flex-grow:1;
-}
-
-.breadcrumbs {
-	display:flex;
-	flex-wrap:wrap;
-	justify-content:flex-start;
-	font-size:$small;
-}
-
-.breadcrumbs ul {
-	padding:0;
-}
-
-.breadcrumbs li {
-	display:inline-block;
-}
-
-.breadcrumbs li::after {
-	padding:0 1rem;
-	content: ">";
-}
-
-.breadcrumbs li:nth-last-child(1)::after {
-	content: "";
-}
-
-.current {
-	text-transform:uppercase;
-}
-
-//////// white padding mobile
-main > *:not(.fullWidth) {
-	margin-left:1rem;
-	margin-right:1rem;
+	color: green;
 }
 
 .fullWidth {
-	grid-column:1 / -1;
-	//margin:0;
+	border: 1px solid red;
+	grid-column: 1 / -1;
 }
 
-.hero {
-	height:20rem;
-	background-repeat:no-repeat;
-	background-position:center center;
-	background-size:cover;
+.sticky {
+	position: sticky;
+	top: 0;
+	background-color:$transparentWhite;
 }
 
+// columns
 .column {
-	border:1px solid green;
+	border: 1px solid green;
 }
 
 .columns {
-	display:flex;
-	flex-direction:column;
-	justify-content:space-between;
-	border:1px solid red;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border: 1px solid red;
 }
 
-.sidebarLeft, .sidebarRight {
-	display:none;
+.hero {
+	height: 20rem;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
 }
 
-footer {
-	padding:2rem 0 2rem 0;
-	background-color:$black;
-	color:$white;
+script {
+	display: none;
 }
 
-.sidebarBottom{
-	background-color:$lightGrey;
-	font-size:$small;
-}
-*/
-//////// media query desktop
-@media screen and(min-width:calc(#{$mainAreaWidth} + 1rem)) {
-	wrapper > * {
-		grid-template-columns:2fr 1fr $mainAreaWidth 1fr 2fr;
+//////// media query - everything else
+@media screen and(min-width:$contentWidth) {
+	body > * { //every row inside the body have this number of columns
+		grid-template-columns: [outerLeft] 1fr [innerLeft] 2fr [content] $contentWidth [innerRight] 2fr [outerRight] 1fr;
+
+		> * { //every column is centered by default
+			grid-column: content;
+		}
 	}
 
-	nav > * {
-		grid-column:3;//uses center column for content in every section
-	}
-
-	wrapper > * > * {
-		grid-column:3;//uses center column for content in every section
-		margin:0;//white x-axis margin around screen on mobile
-	}
-
-	main > *:not(.fullWidth) {
-		margin-left:0rem;
-		margin-right:0rem;
-	}
-
-	.sidebarLeft, .sidebarRight {
-		display:initial;
-	}
-
-	.sidebarLeft {
-		grid-column:2 / span 1;
-	}
-	
-	.sidebarRight {
-		grid-column:4 / span 1;
-	}
-
-	.hero {
-		height:40rem;
-	}
-	
-	.branding{
-		justify-content:initial;
-	}
-	
-	.branding:nth-child(1) {
-		display:hidden;
-	}
-
-	.burger{
-		display:none;
-	}
-
-	.opts{
-		display:initial;
-	}
-	
 	.columns {
-		flex-direction:row;		
+		flex-direction: row;
 	}
 
 	.column {
-		flex-basis:0;//equal widths
-		flex-grow:1;
-		margin:0 1rem;
+		flex-basis: 0; //equal widths
+		flex-grow: 1;
+		margin: 0rem 1rem;
 	}
 
 	.column:nth-child(1) {
-		margin-left:0;
+		margin-left: 0;
 	}
 
 	.column:nth-last-child(1) {
-		margin-right:0;
-	}
-	
-//////// back top right
-	nav .right {
-		margin-left:auto;
-	}
-	
-	.left {
-		text-align:right;
-		grid-column:2 / span 1;
+		margin-right: 0;
 	}
 
-	.extendedLeft {
-		grid-column:2 / span 2;
+	.hero {
+		height: 40rem;
 	}
 }
-/*
-//////// burger on mobile
-#nav-toggle span, 
-#nav-toggle span:before,
-#nav-toggle span:after {
-	
-  cursor: pointer;
-  height: 1px;
-  width: 20px;
-  background: white;
-  position: absolute;
-  display: block;
-  content: '';
-}
-#nav-toggle span:before {
-  top: -8px;
-}
-#nav-toggle span:after {
-  bottom: -8px; 
-}
-*/

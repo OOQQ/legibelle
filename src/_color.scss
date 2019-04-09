@@ -1,22 +1,48 @@
-//////// color
+//////// colors
+$white: whitesmoke;
+$grey: grey;
+$darkerGrey: #534e4d;
+$black: #1f2024;
+
+$green: green;
+
+$transparentWhite: rgba(255, 255, 255, 0.80);
+$transparent: rgba(255, 255, 255, 0);
+$transparentBlack: rgba(0, 0, 0, 0.09);
 
 //////// light theme
-body{
-	color:$black;
-	background-color:whitesmoke;
+body {
+	color: $darkerGrey;
+	background-color: $white;
 	::selection {
-		background:#2f353d;
-		color:white;
+		background-color: $darkerGrey;
+		color: $white;
 	}
 }
 
+header, footer {
+	color: $white;
+	background-color: $black;
+}
 
-//////// dark theme
-.legibelleDark{
-	color:silver;
-	background-color:$black;
+a {
+	color: $green;
+}
+	
+a:hover {
+	color: $green;
+}
+
+code {
+	background: #999;
+}
+
+
+.legibelleDark {
+	color: $grey;
+	background-color: $black;
 	::selection {
-		//background:yellow;
-		//color:magenta;
+		background-color: $white;
+		color: $black;
 	}
 }

@@ -1,1 +1,0 @@
-((new Date().getHours <= 8) && (new Date().getHours >= 20)) ? null : document.body.setAttribute("class", "legibelleDark");
