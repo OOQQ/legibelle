@@ -1,6 +1,5 @@
 //////// form
-/*
-@import 'color.scss';
+@import 'color';
 
 input[type="email"],
 input[type="number"],
@@ -11,10 +10,22 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-  height:38px;
-  padding:6px 10px;
-  background-color:$white;
-  border:1px solid $black;
-  box-shadow:none;
+  height: 38px;
+  padding: 6px 10px;
+  background-color: $white;
+  border:1px solid red;
+  box-shadow: none;
 }
-*/
+
+
+form{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+
+.container{
+  display: flex;
+  flex-flow: column nowrap;
+}
+

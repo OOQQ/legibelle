@@ -1,7 +1,6 @@
-/* legibelle v0.6
- *
- * ©2017-©2019 OOOQQ
- * https://ooqq.me/blob/legibelle
+/* legibelle v0.7a
+ * https://legibelle.com
+ * ©The legibelle authors
  * free to use under the MIT license
  * https://en.wikipedia.org/wiki/MIT_License
  */
@@ -9,12 +8,15 @@
 * {box-sizing:border-box}
 
 html, body {
-	width:100vw;
+	width:100%;
 	height:100vh;
 }
 
-@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
-
+@import 'type';
 @import 'variable';
 @import 'grid';
 @import 'color';
+@import 'form';
+@import 'media';
+@import 'button';
+

@@ -1,140 +1,39 @@
-// equivalentes fuentes en linux
-//  ________________________  //  
-// VERDANA {font-family : Verdana, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, Geneva, Arial, Sans-serif;}
-// ARIAL {font-family : Arial, Helvetica, "Nimbus Sans L", "Liberation Sans", FreeSans, Sans-serif;}
-// MONOSPACE {font-family : "Courier New", "Nimbus Mono L", Monospace;}
+//////// web safe font stacks
+$arial: "Arial", "Nimbus Sans L", "Liberation Sans", FreeSans, Sans-Serif;
+$monospace: "Consolas", "Nimbus Mono L", "Lucida Sans Typewriter", "Lucida Console", Monospace;
+$palatino: "Palatino", 'Palatino Linotype', 'Palatino LT STD', Serif;
+$tahoma: "Tahoma", Sans-Serif;
+$trebuchet: "Trebuchet", "Trebuchet MS", Sans-Serif;
+$verdana: "Verdana", "Bitstream Vera Sans", "DejaVu Sans" Sans-Serif;
 
-//////// type
-
-/*
-@import 'color';
-
-$thin:100;
-$regular:400;
-$bold:700;
-$small:0.9rem;
-
-//////// paragraph
-p {
-	margin: 0 0 1rem 0;//paragraphs have only 1rem margin bottom
+main p {
+	margin-bottom: 1.66rem;
 }
 
-//////// preformatted
-pre{
-	font-family:$monospaced;
-	background:$lightGrey;
-	padding:1rem;
-	overflow:auto;
+h1, h2 {
+	font-weight: 400;
+	color: grey; //deberia ser una referencia
+	font-size: 3rem;
+	margin-top: 1rem;
+	letter-spacing: 0em;
+	text-transform: capitalize;
 }
 
-code{
-	font-family:$monospaced;
-	background:$lightGrey;
-	padding:0.2rem 0.5rem;
-}
-
-code, pre{
-	font-family:$monospaced;
-}
-
-pre > code{
-	font-family:$monospaced;
-	padding:0;
-}
-
-//////// links
-a{
-	color:$darkerGrey;
-	text-decoration:underline;
-}
-
-a:hover{
-	color:$green;
-}
-
-//////// imports (fixed order)
-strong{
-	font-weight:bold;
-}
-
-//////// imports (fixed order)
-i{
-	font-style:italic;
-}
-
-//////// imports (fixed order)
-quote, blockquote{
-	color:$lightGrey;
-}
-
-quote::selection{
-	color:$white;
-  background:$lightGrey;
-}
-
-
-//////// headers
-h1{
-	font-size:3.157rem;
-	font-family:$trebuchet;
-	font-weight:$regular;
-	text-transform:capitalize;	
-	margin:3rem 0 2rem 0;
-}
-
-h2{
-	font-size:2.369rem;
-	font-family:$trebuchet;
-	font-weight:$regular;
-	text-transform:capitalize;
-	margin:3rem 0 1rem 0;
-}
-
-h3{
-	font-size:1.444rem;
-	font-weight:$bold;
-	letter-spacing:0.2rem;
-	text-transform:uppercase;
-	margin:3rem 0 0 0;
-}
-
-h4{
-	font-size:1.333rem;
-	font-weight:$bold;
-	letter-spacing:0.1rem;
-	text-transform:capitalize;
-	margin:3rem 0 0 0;
-}
-
-h5{
-	font-size:1rem;
-	font-weight:$bold;
-	letter-spacing:0.1rem;
-	text-transform:uppercase;
-	margin:3rem 0 0 0;
-}
-
-h6{
-	font-size:1rem;
-	font-weight:$bold;
-	letter-spacing:0.1rem;
-	margin:3rem 0 0 0;
-}
-
-//////// code & preformatted
-code {
-	padding: .2rem .5rem;
-	margin: 0 .2rem;
-	font-size: 90%;
-	white-space: nowrap;
-	background: #F1F1F1;
-	border: 1px solid #E1E1E1;
-	border-radius: 4px;
+small {
+	font-family: $verdana;
+	//font-weight: bold;
 }
 
 pre > code {
-	display: block;
-	padding: 1rem 1.5rem;
-	white-space: pre;
+	font-family: $monospace;
+	//padding: 0;
 }
-*/
+
+code {
+	font-family: $monospace;
+	padding: 0.2rem 0.5rem;
+}
+
+a {
+	text-decoration: underline;
+}

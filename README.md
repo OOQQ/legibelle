@@ -5,19 +5,19 @@
 
 ## features
 - change entire sections copypasting code from the gallery and everything works
-- first class typography support powered by web safe fonts
+- typography is a first class citizen powered exclusively by web safe fonts
 - blazingly fast, blazingly easy and blazingly pretty
 - only one breakpoint: mobile and everything else
 - supports even internet explorer 11
-- no external dependencies
+- zero external dependencies
+- full screen width images
 - no grid but css grid
-- full width images
 - responsive tables
 - powered by sass
 - sticky footer
 
 ## why
-There's only two possible scenarios in web design: the fancy index and the heavy duty content page. That's why.
+WIP
 
 ## structure
 ```text
@@ -25,9 +25,12 @@ legibelle/
 ├─ .vscode
 │  └─ settings.json
 ├─ dist/
-│  ├─ legibelle.css
+│  ├─ util/
+│  |  └─ legibelleDark.js
+|  ├─ legibelle.css
+│  ├─ legibelle.css.map
 │  ├─ legibelle.min.css
-│  └─ legibelleDark.js
+│  └─ legibelle.min.css.map
 ├─ src/
 │  ├─ _button.scss
 │  ├─ _color.scss
@@ -39,18 +42,24 @@ legibelle/
 │  ├─ _variable.scss
 │  └─ legibelle.scss
 ├─ .gitignore
-├─ CHANGELOG
+├─ CHANGELOG.md
+├─ CONTRIBUTE.md
 ├─ index.html
-├─ LICENSE
+├─ LICENSE.md
 └─ README.md
 ```
 
-### author
-OOQQ [Homepage](https://ooqq.me)
-OOQQ [GitHub](https://github.com/OOQQ)
+### authors
+OOQQ [Homepage](https://ooqq.me), [GitHub](https://github.com/OOQQ)  
+[Contributors](https://github.com/OOQQ/legibelle/graphs/contributors)  
+[Voodoo Co.](https://voodoo.co.com)
 
 ## acknowledgement
-legibelle is a project inspired by [Skeleton.css](https://github.com/dhg/Skeleton) of [Dave Gamache](https://github.com/dhg) for a better web.
+- legibelle is a project inspired by [Skeleton.css](https://github.com/dhg/Skeleton) of [Dave Gamache](https://github.com/dhg), for a better web.
+- legibelle includes a copy of [Normalize.css](https://github.com/necolas/normalize.css) of [Nicolas Gallagher](http://nicolasgallagher.com), a modern alternative to CSS resets.
 
 ## license
-Code and documentation ©2017-2019 [OOQQ](https://ooqq.me), [Voodoo.Co](https://voodoo.co.com) & [Contributors](https://github.com/OOQQ/legibelle/graphs/contributors). Code released under the [MIT License](https://en.wikipedia.org/wiki/MIT_License). Docs released under [Creative Commons License](https://en.wikipedia.org/wiki/Creative_Commons_license).
+Code released under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).
+Docs released under [Creative Commons License](https://en.wikipedia.org/wiki/Creative_Commons_license).
+
+Code and Docs ©[OOQQ](https://ooqq.me), [Voodoo.Co](https://voodoo.co.com) & [Contributors](https://github.com/OOQQ/legibelle/graphs/contributors).
