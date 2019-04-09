@@ -1,0 +1,24 @@
+{
+	"liveSassCompile.settings.generateMap":false,
+	"liveSassCompile.settings.formats":[
+		{
+			"savePath":"/dist",
+			"format":"expanded",
+			"extensionName":".css"
+		},
+		{
+			"savePath":"/dist",
+			"format":"compressed",
+			"extensionName":".min.css"
+		}
+	],
+	"liveSassCompile.settings.includeItems":[
+        "src/legibelle.scss"
+    ],
+	"liveSassCompile.settings.excludeList":[
+		".dist/**",
+		".gitignore/**",
+		".vscode/**"
+	]
+}
+

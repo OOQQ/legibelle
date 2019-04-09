@@ -1,0 +1,22 @@
+//////// color
+
+//////// light theme
+body{
+	color:$black;
+	background-color:whitesmoke;
+	::selection {
+		background:#2f353d;
+		color:white;
+	}
+}
+
+
+//////// dark theme
+.legibelleDark{
+	color:silver;
+	background-color:$black;
+	::selection {
+		//background:yellow;
+		//color:magenta;
+	}
+}

@@ -1,0 +1,298 @@
+@charset "UTF-8";
+/* legibelle v0.6
+ *
+ * ©2017-©2019 OOOQQ
+ * https://ooqq.me/blob/legibelle
+ * free to use under the MIT license
+ * https://en.wikipedia.org/wiki/MIT_License
+ */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Verdana", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+.sticky {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto 1fr auto auto;
+      grid-template-rows: auto auto 1fr auto auto;
+  min-height: 100vh;
+}
+
+wrapper > * {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content;
+  border: 1px solid green;
+}
+
+/*
+
+//////// header
+header {
+	font-size:$small;
+	background-color:black;
+	min-height:8em;
+	align-content:center;
+}
+
+.navUL {
+	display:flex;
+	justify-content:space-between;
+	padding:0;
+	list-style-type:none;
+	//background-color:#ddd;
+}
+
+.navUL li {
+	//background-color:#aaa;
+}
+
+nav {
+}
+
+.branding{
+	display:flex;
+	align-items:center;
+	justify-content:space-around;
+	flex-grow:2;
+}
+
+.logo{
+	width:192px;
+	//background-color:#bbb;
+}
+
+.burger{
+	display:initial;
+}
+
+.opts{
+	//background-color:#ccc;
+	display:none;
+	flex-grow:1;
+}
+
+.breadcrumbs {
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:flex-start;
+	font-size:$small;
+}
+
+.breadcrumbs ul {
+	padding:0;
+}
+
+.breadcrumbs li {
+	display:inline-block;
+}
+
+.breadcrumbs li::after {
+	padding:0 1rem;
+	content: ">";
+}
+
+.breadcrumbs li:nth-last-child(1)::after {
+	content: "";
+}
+
+.current {
+	text-transform:uppercase;
+}
+
+//////// white padding mobile
+main > *:not(.fullWidth) {
+	margin-left:1rem;
+	margin-right:1rem;
+}
+
+.fullWidth {
+	grid-column:1 / -1;
+	//margin:0;
+}
+
+.hero {
+	height:20rem;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:cover;
+}
+
+.column {
+	border:1px solid green;
+}
+
+.columns {
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	border:1px solid red;
+}
+
+.sidebarLeft, .sidebarRight {
+	display:none;
+}
+
+footer {
+	padding:2rem 0 2rem 0;
+	background-color:$black;
+	color:$white;
+}
+
+.sidebarBottom{
+	background-color:$lightGrey;
+	font-size:$small;
+}
+*/
+@media screen and (min-width: calc(76.8rem + 1rem)) {
+  wrapper > * {
+    -ms-grid-columns: 2fr 1fr 76.8rem 1fr 2fr;
+        grid-template-columns: 2fr 1fr 76.8rem 1fr 2fr;
+  }
+  nav > * {
+    -ms-grid-column: 3;
+    grid-column: 3;
+  }
+  wrapper > * > * {
+    -ms-grid-column: 3;
+    grid-column: 3;
+    margin: 0;
+  }
+  main > *:not(.fullWidth) {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+  .sidebarLeft, .sidebarRight {
+    display: initial;
+  }
+  .sidebarLeft {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / span 1;
+  }
+  .sidebarRight {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4 / span 1;
+  }
+  .hero {
+    height: 40rem;
+  }
+  .branding {
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+  }
+  .branding:nth-child(1) {
+    display: hidden;
+  }
+  .burger {
+    display: none;
+  }
+  .opts {
+    display: initial;
+  }
+  .columns {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .column {
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin: 0 1rem;
+  }
+  .column:nth-child(1) {
+    margin-left: 0;
+  }
+  .column:nth-last-child(1) {
+    margin-right: 0;
+  }
+  nav .right {
+    margin-left: auto;
+  }
+  .left {
+    text-align: right;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / span 1;
+  }
+  .extendedLeft {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-column: 2 / span 2;
+  }
+}
+
+/*
+//////// burger on mobile
+#nav-toggle span, 
+#nav-toggle span:before,
+#nav-toggle span:after {
+	
+  cursor: pointer;
+  height: 1px;
+  width: 20px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#nav-toggle span:before {
+  top: -8px;
+}
+#nav-toggle span:after {
+  bottom: -8px; 
+}
+*/
+body {
+  color: #1f2024;
+  background-color: whitesmoke;
+}
+
+body ::-moz-selection {
+  background: #2f353d;
+  color: white;
+}
+
+body ::selection {
+  background: #2f353d;
+  color: white;
+}
+
+.legibelleDark {
+  color: silver;
+  background-color: #1f2024;
+}
