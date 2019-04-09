@@ -1,0 +1,25 @@
+/*! legibelle.scss v0.0.1 | MIT License | https://ooqq.me/code/legibelle */
+
+/**
+  Notes:
+  Normalize.css is a dependency of legibelle.scss to produce consistent results across browsers.
+*/
+
+/* Document
+   ========================================================================== */
+$serifG:georgia;
+$serifP:palatino linotype;
+$serifT:serif;
+$h1:2.618em;
+$h2:1.618em;
+$h3:1em;
+$p:1em;
+$small:9.5px;
+$book:500;
+$bold:900;
+
+body{margin:1em;color:#000;font-family:$serifG;font-size:$p}
+h1{font-family:$serifP;font-size:$h1;font-weight:$book}
+h2{font-family:$serifP;font-size:$h2;font-weight:$book}
+h3{font-family:$serifG;font-size:$h3;font-weight:$bold}
+small{font-family:$serifG;font-size:$small}
