@@ -1,18 +1,18 @@
 @import 'variable';
 
 button {
-	cursor: pointer;
-	border: none;
 	background: #eee;
-	color: black;
-	display: inline-block;
+	border: none;
 	box-shadow: none;
+	color: black;
+	cursor: pointer;
+	display: inline-block;
 	min-width: 21rem;
 	padding: 1.6rem;
 }
 
 button:hover {
-	transition: $transitionSpeed;
 	background: grey;
 	color: black;
+	transition: $transitionSpeed;
 }

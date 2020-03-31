@@ -1,19 +1,17 @@
 //////// colors
-$white: whitesmoke;
-$grey: grey;
-$darkerGrey: #534e4d;
 $black: #1f2024;
-
+$darkerGrey: #534e4d;
 $green: green;
-
-$transparentWhite: rgba(255, 255, 255, 0.88);
+$grey: grey;
 $transparent: rgba(255, 255, 255, 0);
 $transparentBlack: rgba(0, 0, 0, 0.09);
+$transparentWhite: rgba(255, 255, 255, 0.88);
+$white: whitesmoke;
 
 //////// light theme
 body {
-	color: $darkerGrey;
 	background-color: $white;
+	color: $darkerGrey;
 	::selection {
 		background-color: $darkerGrey;
 		color: $white;
@@ -39,10 +37,10 @@ code {
 
 
 .legibelleDark {
-	color: $grey;
 	background-color: $black;
+	color: $grey;
 	::selection {
-		background-color: $white;
 		color: $black;
+		background-color: $white;
 	}
 }

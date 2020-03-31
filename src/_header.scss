@@ -1,18 +1,16 @@
 @import 'variable';
 
-//////////////////////////////////
-//HEADER ////////////////////////
 header {
+	align-content: center;
 	font-size: small;
-	min-height:8em;
-	align-content:center;
+	min-height: 8em;
 }
 
 .navUL {
-	display:flex;
-	justify-content:space-between;
-	padding:0;
-	list-style-type:none;
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	padding: 0;
 }
 
 .navUL li {
@@ -22,49 +20,21 @@ nav {
 }
 
 .branding{
-	display:flex;
-	align-items:center;
-	justify-content:space-around;
-	flex-grow:2;
+	align-items: center;
+	display: flex;
+	flex-grow: 2;
+	justify-content: space-around;
 }
 
 .logo{
-	width:192px;
+	width: 192px;
 }
 
 .burger{
-	display:initial;
+	display: initial;
 }
 
 .opts{
-	display:none;
-	flex-grow:1;
-}
-
-.breadcrumbs {
-	display:flex;
-	flex-wrap:wrap;
-	justify-content:flex-start;
-	font-size: small;
-}
-
-.breadcrumbs ul {
-	padding:0;
-}
-
-.breadcrumbs li {
-	display:inline-block;
-}
-
-.breadcrumbs li::after {
-	padding:0 1rem;
-	content: ">";
-}
-
-.breadcrumbs li:nth-last-child(1)::after {
-	content: "";
-}
-
-.current {
-	text-transform:uppercase;
+	display: none;
+	flex-grow: 1;
 }

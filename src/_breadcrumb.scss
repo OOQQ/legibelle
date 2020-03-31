@@ -1,18 +1,27 @@
-@import 'variable';
-
-button {
-	cursor: pointer;
-	border: none;
-	background: #eee;
-	color: black;
-	display: inline-block;
-	box-shadow: none;
-	min-width: 21rem;
-	padding: 1.6rem;
+.breadcrumbs {
+	display: flex;
+	flex-wrap: wrap;
+	font-size: small;
+	justify-content: space-between;
 }
 
-button:hover {
-	transition: $transitionSpeed;
-	background: grey;
-	color: black;
+.breadcrumbs ul {
+	padding: 0;
+}
+
+.breadcrumbs li {
+	display: inline-block;
+}
+
+.breadcrumbs li::after {
+	padding: 0 1rem;
+	content: ">";
+}
+
+.breadcrumbs li:nth-last-child(1)::after {
+	content: "";
+}
+
+.current {
+	text-transform: uppercase;
 }

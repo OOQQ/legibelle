@@ -1,12 +1,16 @@
-//////// dependencies
-html {font-size: 10px} //baseline unit: 0.1rem = 1px
+@import 'type';
 
-$contentWidth: 64.0rem; //640px
+html { //baseline unit: 0.1rem = 1px
+	font-size: 10px
+} 
+
+$contentWidth: 64.0rem;
+
 $transitionSpeed: all 0.3s ease;
 
 body {
 	font-family: $trebuchet;
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 	line-height: 2.35rem;
-	letter-spacing: 0.03em; //si va a cambiar el tamaño de la fuente entre los mq, tiene que ser un valor hardcode en los dos...
+	letter-spacing: 0.03em;
 }

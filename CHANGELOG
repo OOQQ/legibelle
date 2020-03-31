@@ -1,4 +1,12 @@
 Changelog:
+0.7a - 30/03/2020 //minor bugfixes trying to re-learn how everything is laid out
+	new
+		++ removed "CODE_OF_CONDUCT.md", "CONTRIBUTE.md"
+		++ changed the license to GLPv2
+		++ legibelle.com domain not renewed, if someone want it, download it from one of the regular OOQQ channels
+	fix
+		== fixed the "back to the top" position at the breadcrumb bar, now it's correctly right aligned with flex
+
 0.6a - 09/04/2019 //still laying the foundation
 	new
 		++ final copypaste from codepen, lots of stuff still buggy as hell
